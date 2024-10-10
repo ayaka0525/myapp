@@ -7,17 +7,17 @@ default: &default
 development:
   <<: *default
   database: myapp_development
-  username: your_username  # PostgreSQLのユーザー名を指定
-  password: your_password  # 必要に応じてパスワードを設定
+  username:  # PostgreSQLのユーザー名を指定
+  password:   # 必要に応じてパスワードを設定
 
 test:
   <<: *default
   database: myapp_test
-  username: your_username
-  password: your_password
+  username:
+  password:
 
 production:
   <<: *default
   database: myapp_production
-  username: myapp
+  username:
   password: <%= ENV["MYAPP_DATABASE_PASSWORD"] %>
