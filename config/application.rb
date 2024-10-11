@@ -1,7 +1,7 @@
 require_relative "boot"
 
 require "rails/all"
-require 'securerandom'  # SecureRandomを読み込む
+
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
@@ -11,9 +11,6 @@ module Myapp
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.2
-
-    # シークレットキーを設定
-    config.secret_key_base = ENV['SECRET_KEY_BASE'] || SecureRandom.random_bytes(32)
 
     # Please, add to the `ignore` list any other `lib` subdirectories that do
     # not contain `.rb` files, or that should not be reloaded or eager loaded.
